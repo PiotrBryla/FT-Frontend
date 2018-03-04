@@ -24,7 +24,7 @@ app.set('views', [
 app.get('/' ,function(req, res){
 
     let query = {
-        "queryString": "Weather",
+        "queryString": "news",
         "resultContext" : {
 		 "aspects" :[  "title","lifecycle","location","summary","editorial" ]
 	    }
@@ -39,12 +39,32 @@ app.get('/' ,function(req, res){
     }, function (error, response, reqBody){
         // Get title of article
         // response.body.results[0].results[0].title.title
-        console.log(response.body.results[0].results[0]);
+        // console.log(response.body.results[0].results[0]);
     });
 
 
-    res.render('index');
+    res.redirect('/home');
 });
+
+
+// Routing
+let home = require('./routes/home');
+let companies = require('./routes/companies');
+let lifeandarts = require('./routes/lifeandarts');
+let markets = require('./routes/markets');
+let opinion = require('./routes/opinion');
+let uk = require('./routes/uk');
+let workandcareers = require('./routes/workandcareers');
+let world = require('./routes/world');
+
+app.use('/home', home);
+app.use('/companies', companies);
+app.use('/lifeandarts', lifeandarts);
+app.use('/markets', markets);
+app.use('/opinion', opinion);
+app.use('/uk', uk);
+app.use('/workandcareers', workandcareers);
+app.use('/world', world);
 
 // Set application port
 app.listen(3000);

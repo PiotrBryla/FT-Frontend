@@ -4,9 +4,9 @@ html(lang="en")
         meta( charset="utf-8")
         meta(http-equiv="X-UA-Compatible" content="IE=edge")
         meta(name="viewport" content="width=device-width, initial-scale=1.0")
-        link( rel="stylesheet" type="text/css" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^4.3.8,o-fonts@^3.0.4,o-header@^7.2.9,o-header-services@^2.0.5,o-buttons@^5.8.5")
+        link( rel="stylesheet" type="text/css" href="https://www.ft.com/__origami/service/build/v2/bundles/css?modules=o-grid@^4.3.8,o-fonts@^3.0.4,o-header@^7.2.9,o-header-services@^2.0.5,o-buttons@^5.8.5,o-teaser@^2.2.2")
         link( rel="stylesheet" type="text/css" href="/assets/css/style.css")
-        script(src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-grid@^4.3.8,o-fonts@^3.0.4,o-header@^7.2.9,o-header-services@^2.0.5,o-buttons@^5.8.5" async)
+        script(src="https://www.ft.com/__origami/service/build/v2/bundles/js?modules=o-grid@^4.3.8,o-fonts@^3.0.4,o-header@^7.2.9,o-header-services@^2.0.5,o-buttons@^5.8.5,o-teaser@^2.2.2" async)
     body
     header.o-header(data-o-component='o-header', data-o-header--no-js='')
         .o-header__row.o-header__top
@@ -43,21 +43,25 @@ html(lang="en")
             .o-header__container
                 ul.o-header__nav-list.o-header__nav-list--left
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='', aria-label='Current page', aria-selected='true') Home
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/home', aria-label='Current page', aria-selected='true') Home
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='') World
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/world') World
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='') UK
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='uk') UK
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='') Companies
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/companies') Companies
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='') Markets
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/markets') Markets
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='') Opinion
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/opinion') Opinion
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='') Work & Careers
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/workandcareers') Work & Careers
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='') Life & Arts
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/lifeandarts') Life & Arts
                 ul.o-header__nav-list.o-header__nav-list--right
-
+        o-grid-row
+        div(data-o-grid-colspan="12 XL10 XLoffset1")
+            block content
     script(src='//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-header%407.2.9%3A%2Fdemos%2Fsrc%2Fmain.js%2Co-colors%2Co-normalise')
+    script(src='//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-date%40%5E2.8.0')
+    script(src='//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-teaser%402.2.2%3A%2Fdemos%2Fsrc%2Fdemo.js%2Co-date%40%5E2.2.1%2Co-normalise%40%5E1.0.0')
