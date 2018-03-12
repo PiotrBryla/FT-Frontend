@@ -41,7 +41,7 @@ html(lang="en")
                     a.o-header__nav-link.o-header__nav-link--primary(href='') Markets Data
         nav#o-header-nav-desktop.o-header__row.o-header__nav.o-header__nav--desktop(role='navigation', aria-label='Main navigation')
             .o-header__container
-                ul.o-header__nav-list.o-header__nav-list--left
+                ul.o-header__nav-list.o-header__nav-list
                     li.o-header__nav-item
                         a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/home', aria-label='Current page', aria-selected='true') Home
                     li.o-header__nav-item
@@ -60,8 +60,22 @@ html(lang="en")
                         a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/lifeandarts') Life & Arts
                 ul.o-header__nav-list.o-header__nav-list--right
         o-grid-row
-        div(data-o-grid-colspan="12 XL10 XLoffset1")
+        div(data-o-grid-colspan="12 XL6 XLoffset3")
             block content
+            each article in data
+                section
+                    .o-teaser.o-teaser--small(data-o-component='o-teaser')
+                        .o-teaser__content
+                            .o-teaser__meta
+                                a.o-teaser__tag(href='#') News
+                            h2.o-teaser__heading
+                                - var url = article.location.uri; 
+                                a(href=url) #{article.title.title}
+                            p.o-teaser__standfirst #{article.summary.excerpt}
+                            .o-teaser__timestamp.o-teaser
+                                - var publisDate = article.lifecycle.lastPublishDateTime;
+                                time.o-date(data-o-component='o-date', datetime=publisDate) #{article.lifecycle.lastPublishDateTime}
+
     script(src='//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-header%407.2.9%3A%2Fdemos%2Fsrc%2Fmain.js%2Co-colors%2Co-normalise')
     script(src='//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-date%40%5E2.8.0')
     script(src='//www.ft.com/__origami/service/build/v2/bundles/js?modules=o-teaser%402.2.2%3A%2Fdemos%2Fsrc%2Fdemo.js%2Co-date%40%5E2.2.1%2Co-normalise%40%5E1.0.0')

@@ -1,8 +1,13 @@
 const express = require('express');
 const router = express.Router();
+const api = require('../api');
 
 router.get('/', function(req,res){
-    res.render('markets')
+
+    api.searchApi("markets", function(err, data) {
+        if (err) return error;
+        res.render('markets', {data: data.results[0].results})
+    });
 });
 
 
