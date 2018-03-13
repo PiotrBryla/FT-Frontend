@@ -40,24 +40,25 @@ html(lang="en")
                 li.o-header__nav-item
                     a.o-header__nav-link.o-header__nav-link--primary(href='') Markets Data
         nav#o-header-nav-desktop.o-header__row.o-header__nav.o-header__nav--desktop(role='navigation', aria-label='Main navigation')
+            block location
             .o-header__container
                 ul.o-header__nav-list.o-header__nav-list
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/home', aria-label='Current page', aria-selected='true') Home
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/home', aria-label=(location==='home' ? 'Current page' : ''), aria-selected=(location==="home" ? "true" : "")) Home
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/world') World
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/world', aria-label=(location==='world' ? 'Current page' : ''), aria-selected=(location==="world" ? "true" : "")) World
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='uk') UK
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/uk', aria-label=(location==='uk' ? 'Current page' : ''), aria-selected=(location==="uk" ? "true" : "")) UK
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/companies') Companies
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/companies', aria-label=(location==='companies' ? 'Current page' : ''), aria-selected=(location==="companies" ? "true" : "")) Companies
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/markets') Markets
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/markets', aria-label=(location==='markets' ? 'Current page' : ''), aria-selected=(location==="markets" ? "true" : "")) Markets
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/opinion') Opinion
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/opinion', aria-label=(location==='opinion' ? 'Current page' : ''), aria-selected=(location==="opinion" ? "true" : "")) Opinion
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/workandcareers') Work & Careers
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/workandcareers', aria-label=(location==='wac' ? 'Current page' : ''), aria-selected=(location==="wac" ? "true" : "")) Work & Careers
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/lifeandarts') Life & Arts
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/lifeandarts', aria-label=(location==='laa' ? 'Current page' : ''), aria-selected=(location==="laa" ? "true" : "")) Life & Arts
                 ul.o-header__nav-list.o-header__nav-list--right
         o-grid-row
         div(data-o-grid-colspan="12 XL6 XLoffset3")
