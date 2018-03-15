@@ -1,6 +1,6 @@
 # FT-Frontend
-This is my implmentation of recruitment task given by Financial Times. 
-The project is using free [Financial Times Headline Licence Service API](https://developer.ft.com/portal/docs-start-here) to show list of articles headlines retrived by passing searching query to the api. 
+This is my implmentation of recruitment task given by Financial Times.
+The project is using free [Financial Times Headline Licence Service API](https://developer.ft.com/portal/docs-start-here) to show list of articles headlines retrived by passing searching query to the api.
 ## Demo
 Project is hosted on AWS and can be accessed [here](http://ft-env.us-east-2.elasticbeanstalk.com)
 ## Technology Stack
@@ -10,7 +10,8 @@ Project is hosted on AWS and can be accessed [here](http://ft-env.us-east-2.elas
 
 ## Used Search Queries
 
-To obtain headlines list for each pages following table show the query strings passed to the API:
+Table below shows query strings passed to the API in order to obtain headlines list for each of pages:
+
 
 |     Page       |Query String |
 |----------------|-------------------------------|
