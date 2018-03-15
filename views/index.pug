@@ -19,18 +19,6 @@ html(lang="en")
                         a.o-header__top-logo(href='/', title='Go to Financial Times homepage')
                             span.o-header__visually-hidden Financial Times
                     .o-header__top-column.o-header__top-column--right
-
-        #o-header-search-js.o-header__row.o-header__search(role='search', data-o-header-search='')
-            .o-header__container
-                form.o-header__search-form(action='/search', role='search', aria-label='Site search')
-                    label.o-header__visually-hidden(for='o-header-search-term-js')
-                        | Search the 
-                        abbr(title='Financial Times') FT
-                    input#o-header-search-term-js.o-header__search-term(name='q', type='text', placeholder='Search the FT')
-                    button.o-header__search-submit(type='submit')
-                        | Search
-                    button.o-header__search-close.o--if-js(type='button', aria-controls='o-header-search-js', title='Close search bar')
-                        span.o-header__visually-hidden Close
         nav#o-header-nav-mobile.o-header__row.o-header__nav.o-header__nav--mobile(role='navigation', aria-label='Main navigation')
             ul.o-header__nav-list
                 li.o-header__nav-item
@@ -60,6 +48,17 @@ html(lang="en")
                     li.o-header__nav-item
                         a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/lifeandarts', aria-label=(location==='laa' ? 'Current page' : ''), aria-selected=(location==="laa" ? "true" : "")) Life & Arts
                 ul.o-header__nav-list.o-header__nav-list--right
+        #o-header-search-js.o-header__row.o-header__search(role='search', data-o-header-search='')
+            .o-header__container
+                form.o-header__search-form(action='/search', role='search', aria-label='Site search')
+                    label.o-header__visually-hidden(for='o-header-search-term-js')
+                        | Search the 
+                        abbr(title='Financial Times') FT
+                    input#o-header-search-term-js.o-header__search-term(name='q', type='text', placeholder='Search the FT')
+                    button.o-header__search-submit(type='submit')
+                        | Search
+                    button.o-header__search-close.o--if-js(type='button', aria-controls='o-header-search-js', title='Close search bar')
+                        span.o-header__visually-hidden Close
         o-grid-row
         div(data-o-grid-colspan="12 XL6 XLoffset3")
             block content
