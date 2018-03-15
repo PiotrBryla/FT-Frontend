@@ -19,40 +19,40 @@ html(lang="en")
                         a.o-header__top-logo(href='/', title='Go to Financial Times homepage')
                             span.o-header__visually-hidden Financial Times
                     .o-header__top-column.o-header__top-column--right
+                    block location
         nav#o-header-nav-mobile.o-header__row.o-header__nav.o-header__nav--mobile(role='navigation', aria-label='Main navigation')
             ul.o-header__nav-list
                 li.o-header__nav-item
-                    a.o-header__nav-link.o-header__nav-link--primary(href='', aria-label='Current page', aria-selected='true') Home
+                    a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/home', aria-label=(loc==='home' ? 'Current page' : ''), aria-selected=(loc==="home" ? "true" : "")) Home
                 li.o-header__nav-item
-                    a.o-header__nav-link.o-header__nav-link--primary(href='') FastFT
+                    a.o-header__nav-link.o-header__nav-link--primary(href='/fastft', aria-label=(loc==='fastft' ? 'Current page' : ''), aria-selected=(loc==="fastft" ? "true" : "")) FastFT
                 li.o-header__nav-item
-                    a.o-header__nav-link.o-header__nav-link--primary(href='') Markets Data
+                    a.o-header__nav-link.o-header__nav-link--primary(href='/marketsdata', aria-label=(loc==='marketsdata' ? 'Current page' : ''), aria-selected=(loc==="marketsdata" ? "true" : "")) Markets Data
         nav#o-header-nav-desktop.o-header__row.o-header__nav.o-header__nav--desktop(role='navigation', aria-label='Main navigation')
-            block location
             .o-header__container
                 ul.o-header__nav-list.o-header__nav-list
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/home', aria-label=(location==='home' ? 'Current page' : ''), aria-selected=(location==="home" ? "true" : "")) Home
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/home', aria-label=(loc==='home' ? 'Current page' : ''), aria-selected=(loc==="home" ? "true" : "")) Home
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/world', aria-label=(location==='world' ? 'Current page' : ''), aria-selected=(location==="world" ? "true" : "")) World
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/world', aria-label=(loc==='world' ? 'Current page' : ''), aria-selected=(loc==="world" ? "true" : "")) World
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/uk', aria-label=(location==='uk' ? 'Current page' : ''), aria-selected=(location==="uk" ? "true" : "")) UK
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/uk', aria-label=(loc==='uk' ? 'Current page' : ''), aria-selected=(loc==="uk" ? "true" : "")) UK
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/companies', aria-label=(location==='companies' ? 'Current page' : ''), aria-selected=(location==="companies" ? "true" : "")) Companies
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/companies', aria-label=(loc==='companies' ? 'Current page' : ''), aria-selected=(loc==="companies" ? "true" : "")) Companies
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/markets', aria-label=(location==='markets' ? 'Current page' : ''), aria-selected=(location==="markets" ? "true" : "")) Markets
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/markets', aria-label=(loc==='markets' ? 'Current page' : ''), aria-selected=(loc==="markets" ? "true" : "")) Markets
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/opinion', aria-label=(location==='opinion' ? 'Current page' : ''), aria-selected=(location==="opinion" ? "true" : "")) Opinion
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/opinion', aria-label=(loc==='opinion' ? 'Current page' : ''), aria-selected=(loc==="opinion" ? "true" : "")) Opinion
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/workandcareers', aria-label=(location==='wac' ? 'Current page' : ''), aria-selected=(location==="wac" ? "true" : "")) Work & Careers
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/workandcareers', aria-label=(loc==='wac' ? 'Current page' : ''), aria-selected=(loc==="wac" ? "true" : "")) Work & Careers
                     li.o-header__nav-item
-                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/lifeandarts', aria-label=(location==='laa' ? 'Current page' : ''), aria-selected=(location==="laa" ? "true" : "")) Life & Arts
+                        a#o-header-link-.o-header__nav-link.o-header__nav-link--primary(href='/lifeandarts', aria-label=(loc==='laa' ? 'Current page' : ''), aria-selected=(loc==="laa" ? "true" : "")) Life & Arts
                 ul.o-header__nav-list.o-header__nav-list--right
         #o-header-search-js.o-header__row.o-header__search(role='search', data-o-header-search='')
             .o-header__container
                 form.o-header__search-form(action='/search', role='search', aria-label='Site search')
                     label.o-header__visually-hidden(for='o-header-search-term-js')
-                        | Search the 
+                        | Search the
                         abbr(title='Financial Times') FT
                     input#o-header-search-term-js.o-header__search-term(name='q', type='text', placeholder='Search the FT')
                     button.o-header__search-submit(type='submit')
@@ -69,7 +69,7 @@ html(lang="en")
                             .o-teaser__meta
                                 a.o-teaser__tag(href='#') News
                             h2.o-teaser__heading
-                                - var url = article.location.uri; 
+                                - var url = article.location.uri;
                                 a(href=url) #{article.title.title}
                             p.o-teaser__standfirst #{article.summary.excerpt}
                             .o-teaser__timestamp.o-teaser

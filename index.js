@@ -35,6 +35,9 @@ let uk = require('./routes/uk');
 let workandcareers = require('./routes/workandcareers');
 let world = require('./routes/world');
 
+let fastft = require('./routes/fastft');
+let marketsdata = require('./routes/marketsdata');
+
 app.use('/home', home);
 app.use('/companies', companies);
 app.use('/lifeandarts', lifeandarts);
@@ -45,5 +48,8 @@ app.use('/uk', uk);
 app.use('/workandcareers', workandcareers);
 app.use('/world', world);
 
+app.use('/fastft', fastft);
+app.use('/marketsdata', marketsdata);
+
 // Set application port
-app.listen(3000);
+app.listen(8081);

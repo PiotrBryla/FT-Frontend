@@ -4,11 +4,11 @@ const api = require('../api');
 
 router.get('/', function(req,res){
 
-
-    api.searchApi(req.query.q, function(err, data) {
+    api.searchApi("fastft", function(err, data) {
         if (err) return error;
-        res.render('search', {data: data.results[0].results, q: req.query.q})
+        res.render('fastft', {data: data.results[0].results})
     });
 });
+
 
 module.exports = router
