@@ -1,8 +1,7 @@
 # FT-Frontend
 This is my implmentation of recruitment task given by Financial Times.
 The project is using free [Financial Times Headline Licence Service API](https://developer.ft.com/portal/docs-start-here) to show list of articles headlines retrived by passing searching query to the api.
-## Demo
-Project is hosted on AWS and can be accessed [here](http://ft-env.us-east-2.elasticbeanstalk.com)
+
 ## Technology Stack
 - [Node.JS](https://nodejs.org) and [Express](https://expressjs.com/) are used for the backend side.
 - Application is using  [Pug](https://pugjs.org/api/getting-started.html) templating engine.
